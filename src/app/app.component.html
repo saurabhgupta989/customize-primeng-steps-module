@@ -1,0 +1,14 @@
+
+<div #stepsDiv>
+  <p-steps [model]="items" [(activeIndex)]="activeIndex" [readonly]="true" [isPreviousTabClickable]="true" [hideStepNumber]="true"></p-steps>
+</div>
+
+<button (click)="nextStepPlease()" *ngIf="activeIndex!==5">Next</button>
+<button (click)="submit()" *ngIf="activeIndex===5">Submit</button>
+
+<app-step1 *ngIf="activeIndex===0"></app-step1>
+<app-step2 *ngIf="activeIndex===1"></app-step2>
+<app-step3 *ngIf="activeIndex===2"></app-step3>
+<app-step4 *ngIf="activeIndex===3"></app-step4>
+<app-step5 *ngIf="activeIndex===4"></app-step5>
+<app-step6 *ngIf="activeIndex===5"></app-step6>
